@@ -111,10 +111,9 @@ info "Installing rbenv-gem-rehash so the shell automatically picks up binaries a
 
 info "Installing OpenSSL 1.0.1e ..."
   successfully brew install openssl
-  successfully brew link openssl --force
   
 info "Installing Ruby 2.0.0-p247 ..."
-  CC=gcc-4.2 successfully rbenv install 2.0.0-p247
+  CC=gcc-4.2 RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl"successfully rbenv install 2.0.0-p247
 
 info "Setting Ruby 1.9.3-p392 as global default Ruby ..."
   successfully rbenv global 2.0.0-p247
