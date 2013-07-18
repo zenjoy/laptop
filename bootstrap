@@ -109,6 +109,10 @@ info "Installing rbenv-gem-rehash so the shell automatically picks up binaries a
   successfully chgrp -R staff /usr/local/rbenv/plugins/rbenv-gem-rehash
   successfully chmod -R g+rwxs /usr/local/rbenv/plugins/rbenv-gem-rehash  
 
+info "Installing OpenSSL 1.0.1e ..."
+  successfully brew install openssl
+  successfully brew link openssl --force
+  
 info "Installing Ruby 2.0.0-p247 ..."
   CC=gcc-4.2 successfully rbenv install 2.0.0-p247
 
