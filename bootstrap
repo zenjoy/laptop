@@ -83,10 +83,10 @@ info "Installing rbenv for changing Ruby versions ..."
   successfully git clone git://github.com/sstephenson/rbenv.git /usr/local/rbenv
   successfully chgrp -R staff /usr/local/rbenv
   successfully chmod -R g+rwxXs /usr/local/rbenv
-  successfully echo 'export RBENV_ROOT=/usr/local/rbenv' >> ~/.zlogin
-  successfully echo 'export PATH="$RBENV_ROOT/bin:$RBENV_ROOT/shims:$PATH"' >> ~/.zlogin
-  successfully echo 'eval "$(rbenv init -)"' >> ~/.zlogin
-  successfully source ~/.zlogin
+  successfully echo 'export RBENV_ROOT=/usr/local/rbenv' >> /private/etc/zprofile
+  successfully echo 'export PATH="$RBENV_ROOT/bin:$RBENV_ROOT/shims:$PATH"' >> /private/etc/zprofile
+  successfully echo 'eval "$(rbenv init -)"' >> /private/etc/zprofile
+  successfully source /private/etc/zprofile
 
 info "Installing ruby-build for installing Rubies ..."
   successfully mkdir /usr/local/rbenv/plugins
